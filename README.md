@@ -41,8 +41,7 @@ A simple API service that fetches cryptocurrency data for Bitcoin, Ethereum, and
     
     Copy code
     
-    `git clone https://github.com/your-username/crypto-stats-api.git
-    cd crypto-stats-api` 
+    `git clone https://github.com/adityabhave525/KoinX-assignment` 
     
 2.  **Install the dependencies**:
     
@@ -61,7 +60,7 @@ A simple API service that fetches cryptocurrency data for Bitcoin, Ethereum, and
         
         Copy code
         
-        `MONGO_URI=mongodb://your-mongo-uri-here` 
+        `MONGO_URL=mongodb://your-mongo-uri-here` 
         
 4.  **Start the server**:
     
@@ -69,10 +68,11 @@ A simple API service that fetches cryptocurrency data for Bitcoin, Ethereum, and
     
     Copy code
     
-    `npm start` 
+    `node index.js` 
     
 5.  **Run the cron job**: The cron job will automatically fetch data every 2 hours and store it in the database.
     
+    `node background.js`
 
 ----------
 
