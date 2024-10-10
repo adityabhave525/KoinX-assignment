@@ -10,7 +10,7 @@ const URL = "https://api.coingecko.com/api/v3/";
 const API_KEY = process.env.API_KEY;
 
 app.get("/stats", async (req, res) => {
-  const { coin } = req.body;
+  const { coin } = req.query;
 
   if (!coin) {
     return res.status(400).json({
@@ -49,7 +49,7 @@ app.get("/stats", async (req, res) => {
 });
 
 app.get("/deviation", async (req, res) => {
-  const { coin } = req.body;
+  const { coin } = req.query;
 
   if (!coin) {
     return res.status(400).json({ error: "Coin is required" });
